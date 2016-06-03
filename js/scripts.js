@@ -54,7 +54,7 @@ var destination = function() {
 
 var back = function() {
   $('#' + destination.toLowerCase()).hide();
-  $('.jumbotron').hide();
+  $('#hidden-jumbotron').hide();
   $('.form').slideToggle();
 };
 
