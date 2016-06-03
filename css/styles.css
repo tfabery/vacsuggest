@@ -1,4 +1,14 @@
-.destination {
+.jumbotron {
+  display: none;
+  margin-top: 1em;
+}
+
+.jumbotron button {
+  display: block;
+  margin: auto;
+}
+
+.hidden-destination {
   display: none;
 }
 
