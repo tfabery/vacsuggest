@@ -1,6 +1,6 @@
 # Vacation Suggester
 
-This is a webpage that will suggest a vacation destination to you depending on your answers. The questions are in multiple choice format, so choose the answer that you like the best. Don't forget to answer all the questions so we can suggest the best place for your next vacation.
+This is a webpage that will suggest a vacation destination to you depending on your answers. For multiple choice questions choose the answer that you like the best. Don't forget to answer all the questions so we can suggest the best place for your next vacation.
 
 ## Prerequisites
 
@@ -38,6 +38,6 @@ Clone the repository from https://github.com/tfabery/vacsuggest via "git clone h
 
 * **Tony Fabery** - *Initial work*
 
-## License
+## Copyright and license
 
-This project is licensed under the MIT License
+ Code released under licensed under the MIT License
