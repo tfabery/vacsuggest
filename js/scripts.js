@@ -44,12 +44,13 @@ $(function() {
     tv = $('input:radio[name=tv]:checked').val();
     weather = $('input:radio[name=weather]:checked').val();
 
-    console.log(name);
-    console.log(startDate);
-    console.log(month);
-    console.log(landscape);
-    console.log(tv);
-    console.log(weather);
+    //======Debug=======
+    // console.log(name);
+    // console.log(startDate);
+    // console.log(month);
+    // console.log(landscape);
+    // console.log(tv);
+    // console.log(weather);
 
     destination();
   });
