@@ -1,15 +1,20 @@
-.jumbotron {
+#hidden-jumbotron {
   display: none;
   margin-top: 1em;
 }
 
-.jumbotron button {
+#hidden-jumbotron button {
   display: block;
   margin: auto;
 }
 
 .hidden-destination {
   display: none;
+}
+
+#form-jumbotron {
+  text-align: center;
+  margin-top: 1em;
 }
 
 .question {

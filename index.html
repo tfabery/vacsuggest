@@ -135,21 +135,24 @@
     </div>
 
     <div class="container">
-      <div class="jumbotron">
-        <h1>Hello <span class="name"></span>, visit <span class="destination"></span> for your next vacation!</h1>
+      <div class="jumbotron" id="hidden-jumbotron">
+        <h1>Hello <span class="name"></span>, <span class="no-choice"></span> visit <span class="destination"></span> for your next vacation!</h1>
         <button type="button" class="btn btn-warning">Let me change my answers</button>
       </div>
 
       <div class="form">
+        <div class="jumbotron" id="form-jumbotron">
+          <h1>Find a vacation spot!</h1>
+        </div>
         <form id="vac-form">
           <div class="form-group">
             <label for="name" class="question">Name:</label>
-            <input type="text" class="form-control" id="name">
+            <input type="text" class="form-control" id="name" required>
           </div>
 
           <div class="form-group">
             <label for="start" class="question">Vacation month:</label>
-            <input type="date" class="form-control" id="startDate">
+            <input type="date" class="form-control" id="startDate" required>
           </div>
 
           <div class="radio">

@@ -5,6 +5,7 @@ var landscape;
 var tv;
 var weather;
 var destination;
+var noChoice = 'you did not answer any multiple choice questions. So'
 
 var getMonth = function(date) {
   var mm = date.substr(5, 2);
@@ -30,11 +31,18 @@ var destination = function() {
     $('.jumbotron').fadeIn();
     $('.form').hide();
   }
-  else if ((tv === 'animals' && weather === 'warm' && ((month >= 3 && month <= 5) || (month >= 9 && month <= 11))) || (tv === 'animals' && weather === 'hot' && (month ===12 || month <= 2))) {
-    destination = 'New Zealand';
+  else if ((tv === 'animals' && weather === 'warm' && ((month >= 3 && month <= 5) || (month >= 9 && month <= 11))) || (tv === 'animals' && weather === 'hot' && (month === 12 || month <= 2))) {
+    destination = 'NewZealand';
     $('#newzealand').slideDown();
     $('.jumbotron').fadeIn();
     $('.form').hide();
+  }
+  else if (landscape === tv && tv === weather) {
+    destination = 'Bahamas';
+    $('#bahamas').slideDown();
+    $('.jumbotron').fadeIn();
+    $('.form').hide();
+    $('.no-choice').text(noChoice);
   }
   else {
     destination = 'Bahamas';
@@ -42,6 +50,12 @@ var destination = function() {
     $('.jumbotron').fadeIn();
     $('.form').hide();
   }
+};
+
+var back = function() {
+  $('#' + destination.toLowerCase()).hide();
+  $('.jumbotron').hide();
+  $('.form').slideToggle();
 };
 
 // Frontend logic
@@ -72,5 +86,8 @@ $(function() {
 
     $('.name').text(name);
     $('.destination').text(destination);
+  });
+  $('.jumbotron button').click(function() {
+    back();
   });
 });
