@@ -19,27 +19,27 @@ var destination = function() {
     $('.jumbotron').fadeIn();
     $('.form').hide();
   }
-  else if (landscape === 'desert') {
-    destination = 'Egypt';
-    $('#egypt').slideDown();
-    $('.jumbotron').fadeIn();
-    $('.form').hide();
-  }
   else if (tv === 'anime') {
     destination = 'Japan';
     $('#japan').slideDown();
     $('.jumbotron').fadeIn();
     $('.form').hide();
   }
-  else if ((tv === 'animals' && weather === 'warm' && ((month >= 3 && month <= 5) || (month >= 9 && month <= 11))) || (tv === 'animals' && weather === 'hot' && (month === 12 || month <= 2))) {
+  else if ((tv === 'animals' && weather === 'warm' && ((month >= 3 && month <= 5) || (month >= 9 && month <= 11))) || (tv === 'animals' && weather === 'hot' && (month === 12 || month <= 2)) || landscape === 'mountain') {
     destination = 'NewZealand';
     $('#newzealand').slideDown();
     $('.jumbotron').fadeIn();
     $('.form').hide();
   }
+  else if (landscape === 'desert' || weather === 'hot') {
+    destination = 'Egypt';
+    $('#egypt').slideDown();
+    $('.jumbotron').fadeIn();
+    $('.form').hide();
+  }
   else if (landscape === tv && tv === weather) {
-    destination = 'Bahamas';
-    $('#bahamas').slideDown();
+    destination = 'Antarctica';
+    $('#antarctica').slideDown();
     $('.jumbotron').fadeIn();
     $('.form').hide();
     $('.no-choice').text(noChoice);
