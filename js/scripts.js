@@ -20,22 +20,26 @@ var destination = function() {
   }
   else if (landscape === 'desert') {
     destination = 'Egypt';
-    $('#egypt').show();
+    $('#egypt').slideDown();
+    $('.jumbotron').fadeIn();
     $('.form').hide();
   }
   else if (tv === 'anime') {
     destination = 'Japan';
-    $('#japan').show();
+    $('#japan').slideDown();
+    $('.jumbotron').fadeIn();
     $('.form').hide();
   }
   else if ((tv === 'animals' && weather === 'warm' && ((month >= 3 && month <= 5) || (month >= 9 && month <= 11))) || (tv === 'animals' && weather === 'hot' && (month ===12 || month <= 2))) {
     destination = 'New Zealand';
-    $('#newzealand').show();
+    $('#newzealand').slideDown();
+    $('.jumbotron').fadeIn();
     $('.form').hide();
   }
   else {
     destination = 'Bahamas';
-    $('#bahamas').show();
+    $('#bahamas').slideDown();
+    $('.jumbotron').fadeIn();
     $('.form').hide();
   }
 };
@@ -51,15 +55,21 @@ $(function() {
     tv = $('input:radio[name=tv]:checked').val();
     weather = $('input:radio[name=weather]:checked').val();
 
-    //======Debug=======
+    //================Debug=====================
     // console.log(name);
     // console.log(startDate);
     // console.log(month);
     // console.log(landscape);
     // console.log(tv);
     // console.log(weather);
+    //================End debug=================
 
     destination();
+
+    //================Debug=====================
+    // console.log(destination);
+    //================End debug=================
+
     $('.name').text(name);
     $('.destination').text(destination);
   });
