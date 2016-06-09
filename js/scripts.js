@@ -31,7 +31,7 @@ var getDestination = function() {
     $('.jumbotron').fadeIn();
     $('.form').hide();
   }
-  else if (landscape === 'desert' || weather === 'hot') {
+  else if (landscape === 'desert' || weather === '') {
     destination = 'Egypt';
     $('#egypt').slideDown();
     $('.jumbotron').fadeIn();
@@ -78,7 +78,7 @@ $(function() {
     // console.log(weather);
     //================End debug=================
 
-    var destination = getDestination();
+    getDestination();
 
     //================Debug=====================
     // console.log(destination);
