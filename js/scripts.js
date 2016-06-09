@@ -12,7 +12,7 @@ var getMonth = function(date) {
   return parseInt(mm);
 };
 
-var destination = function() {
+var getDestination = function() {
   if (weather === 'cold') {
     destination = 'Antarctica';
     $('#antarctica').slideDown();
@@ -78,7 +78,7 @@ $(function() {
     // console.log(weather);
     //================End debug=================
 
-    destination();
+    var destination = getDestination();
 
     //================Debug=====================
     // console.log(destination);
